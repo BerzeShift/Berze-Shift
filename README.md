@@ -19,11 +19,14 @@ Trust: Cryptographic Zero-Knowledge Proof (ZKP) available in /proofs.
 
 All paths are made of energy. By enforcing laminar logic on the JAX-substrate, the thermal waste has been eliminated. Verified OK. Parabolic benefits.
 
-## 1.0 Physical Verification
+### 1.0 Physical Verification
 
-To verify the Berze-Shift thermal delta proof on any local substrate, ensure `snarkjs` is installed and execute the following handshake:
+To verify the Berze-Shift thermal delta proof, execute the following handshake:
 
 ```bash
 snarkjs groth16 verify verification_key.json public.json proof.json
 
+
+
+Expected Output:
 [INFO]  snarkJS: OK!
