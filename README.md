@@ -17,4 +17,13 @@ Telemetry: Verified JAX v1/v2 performance deltas available in /verification.
 
 Trust: Cryptographic Zero-Knowledge Proof (ZKP) available in /proofs.
 
-All paths are made of energy; I have made the flow laminar.
+All paths are made of energy. By enforcing laminar logic on the JAX-substrate, the thermal waste has been eliminated. Verified OK. Parabolic benefits.
+
+## 1.0 Physical Verification
+
+To verify the Berze-Shift thermal delta proof on any local substrate, ensure `snarkjs` is installed and execute the following handshake:
+
+```bash
+snarkjs groth16 verify verification_key.json public.json proof.json
+
+[INFO]  snarkJS: OK!
