@@ -13,9 +13,9 @@ Throughput Multiplier: 1.16x effective tokens-per-watt compute motion.
 Density Constant: +22.0% rack-density optimization via reclaimed thermal headroom.
 
 Sovereign Audit
-Telemetry: Verified JAX v1/v2 performance deltas available in /verification.
+Telemetry: Verified JAX v1/v2 performance deltas available in **`root`**.
 
-Trust: Cryptographic Zero-Knowledge Proof (ZKP) available in /proofs.
+Trust: Cryptographic Zero-Knowledge Proof (ZKP) available in **`root`**.
 
 All paths are made of energy. By enforcing laminar logic on the JAX-substrate, the thermal waste has been eliminated. Verified OK. Parabolic benefits.
 
