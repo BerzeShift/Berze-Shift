@@ -40,3 +40,7 @@ For **L10-L12 Infrastructure Architects** or qualified Sovereign Partners:
 * **Sandbox Access:** A secure, containerized environment for reproducibility testing is available.
 * **Full Telemetry:** Run the Dirichlet-Shift against standard baselines to confirm the 16.8% energy recovery in real-time.
 * **Handshake:** Contact for secure access.
+
+> ### 🚀 **Infrastructure Verification**
+> Verified Infrastructure Architects (L10+) may request access to a secure JAX/XLA Sandbox to audit the Dirichlet-Shift against standard H100/TPU baselines. 
+> [**View Sandbox Access Protocol**](./SANDBOX_ACCESS.md)
