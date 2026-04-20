@@ -1,20 +1,16 @@
 pragma circom 2.0.0;
 
 template ThermalDelta() {
-    signal input secret_alpha;   // The gated weight
-    signal input base_temp;      // e.g., 40 (Celsius)
-    signal output final_temp;    // The resulting temp
+    signal input secret_alpha;   // Secret: 15
+    signal input base_temp;      // Public: 40000 (40C)
+    signal output final_temp;    // Public: 22795 (22.795C)
 
-    // Physical Truth: The Delta is a function of Alpha times a scaling factor
-    // We use 1.147 as the scaling constant for the 17.2C drop
-    // (15 * 1.147 = 17.2)
+    // 15 * 1147 = 17205 (The 17.2C drop)
+    signal delta;
+    delta <== secret_alpha * 1147;
     
-    signal interim;
-    interim <== secret_alpha * 1147; 
-    
-    // final_temp = base_temp*1000 - (secret_alpha * 1147)
-    // We use integers because Circom doesn't do floats natively
-    final_temp <== (base_temp * 1000) - interim;
+    // 40000 - 17205 = 22795
+    final_temp <== base_temp - delta;
 }
 
-component main = ThermalDelta();
+component main {public [base_temp]} = ThermalDelta();
