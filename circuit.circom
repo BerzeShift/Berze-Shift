@@ -1,15 +1,20 @@
 pragma circom 2.0.0;
 
-template BerzeShift() {
-    // Private inputs (The "Vault" - raw telemetry)
-    signal input ambient_temp;
-    signal input exhaust_temp;
+template ThermalDelta() {
+    signal input secret_alpha;   // The gated weight
+    signal input base_temp;      // e.g., 40 (Celsius)
+    signal output final_temp;    // The resulting temp
 
-    // Public output (The "15" or "17.2" the world sees)
-    signal output thermal_delta;
-
-    // The Physical Constraint: Delta must equal exhaust minus ambient
-    thermal_delta <== exhaust_temp - ambient_temp;
+    // Physical Truth: The Delta is a function of Alpha times a scaling factor
+    // We use 1.147 as the scaling constant for the 17.2C drop
+    // (15 * 1.147 = 17.2)
+    
+    signal interim;
+    interim <== secret_alpha * 1147; 
+    
+    // final_temp = base_temp*1000 - (secret_alpha * 1147)
+    // We use integers because Circom doesn't do floats natively
+    final_temp <== (base_temp * 1000) - interim;
 }
 
-component main = BerzeShift();
+component main = ThermalDelta();
