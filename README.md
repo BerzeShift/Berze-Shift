@@ -1,5 +1,5 @@
 # Berze-Shift: Proportional Efficiency Scaling
-**Objective:** Maximum Inference Density at Minimal Entropy Cost.
+**Objective:** Maximum Inference Density at Minimal Entropy Cost
 
 ⚠️ SUBSTRATE LOCK: v1.0.0-PROVED
 Verification Timestamp: April 20, 2026 | 17:02 EDT (21:02 UTC)
